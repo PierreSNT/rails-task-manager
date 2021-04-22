@@ -1,8 +1,11 @@
 <h2><%= @task.title %></h2>
+<button><%= link_to 'Edit this task', "#{@task.id}/edit" %></button>
 <p><%= @task.details %></p>
-<p><% if @task.completed == false %>
-  <%= "This task is not completed yet" %>
+<p><%= print @task.completed %></p>
+<!-- <p><% if @task.completed == false %> -->
+ <!--  <%= "This task is not completed yet" %>
 <% else %>
   <%= "This task is completed" %>
-<% end %><p>
+<% end %><p> -->
 <p><%= link_to "Back to list", tasks_path %></p>
+
